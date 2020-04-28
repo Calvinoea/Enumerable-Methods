@@ -39,6 +39,9 @@ Type ruby enumerable.rb through the terminal to run the code or use the debug bu
 ## 🤝 Contributing
 You are welcome to make contributions to the repository. Contributions may be made through issues comments and feature requests.
 
+## 🤝 Special Thanks
+
+Thank you to the Microverse TSEs for taking the time to review the project and provide feedback.
 
 ## 👤 Author
 
