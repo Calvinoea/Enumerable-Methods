@@ -8,16 +8,16 @@ The code contains custom methods, made to behave like methods in Ruby. The metho
 
 Enumerables module in Ruby with methods:
 
-my_each
-my_each_with_index
-my_select
-my_all?
-my_any?
-my_none?
-my_count
-my_map
-my_inject
-multiply_els
+- my_each
+- my_each_with_index
+- my_select
+- my_all?
+- my_any?
+- my_none?
+- my_count
+- my_map
+- my_inject
+- multiply_els
 
 ## Built With
 
