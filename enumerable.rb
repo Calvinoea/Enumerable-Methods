@@ -1,3 +1,4 @@
+# rubocop:disable Style/CaseEquality
 module Enumerable
   def my_each
     return to_enum :my_each unless block_given?
@@ -32,7 +33,7 @@ module Enumerable
   def my_all?(*args)
     result = true
     if !args[0].nil?
-      my_each { |element| result = false unless args[0] == element }
+      my_each { |element| result = false unless args[0] === element }
     elsif !block_given?
       my_each { |element| result = false unless element }
     else
@@ -44,7 +45,7 @@ module Enumerable
   def my_any?(*arg)
     result = false
     if !arg[0].nil?
-      my_each { |element| result = true if arg[0] == element }
+      my_each { |element| result = true if arg[0] === element }
     elsif !block_given?
       my_each { |element| result = true if element }
     else
@@ -61,9 +62,9 @@ module Enumerable
     counter = 0
 
     if block_given?
-      my_each { |_element| counter += 1 if yield(item) }
+      my_each { |element| counter += 1 if yield(element) }
     elsif number
-      my_each { |_element| counter += 1 if item == number }
+      my_each { |element| counter += 1 if element == number }
     else
       counter = size
     end
@@ -103,3 +104,4 @@ end
 def multiply_els(array)
   array.my_inject { |item, next_item| item * next_item }
 end
+# rubocop:enable Style/CaseEquality
