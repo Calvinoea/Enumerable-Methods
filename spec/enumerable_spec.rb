@@ -66,7 +66,7 @@ describe '.my_all' do
 end
 
 describe '#my_any' do
-  it 'scans the array even if there is no block'
+  it 'scans the array even if there is no block' do
   expect(nil_array.my_any?).to be(true)
 end
 
@@ -74,6 +74,8 @@ end
 it 'works even if array is empty' do
   expect(empty.my_any?).to be(false)
       end
+    end
+
 
 
 
